@@ -1,0 +1,50 @@
+@mixin flex-center-alignment {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+@mixin nav-hover {
+  background: white;
+  cursor: pointer;
+  color: black;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #0c41b2;
+
+  #left-nav-panel, #right-nav-panel {
+    @include flex-center-alignment;
+  }
+
+  #right-nav-panel {
+    height: 50px;
+    width: 200px;
+    color: white;
+
+    &:hover {
+      @include nav-hover;
+    }
+  }
+
+  .nav-element {
+    width: 100px;
+    height: 50px;
+    color: white;
+
+    @include flex-center-alignment;
+
+    &:hover {
+      @include nav-hover;
+    }
+  }
+
+  #nav-icon {
+    font-size: 30px;
+  }
+}
