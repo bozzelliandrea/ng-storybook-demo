@@ -1,0 +1,16 @@
+<nav>
+  <div id="left-nav-panel">
+    <ng-container *ngFor="let elem of navElementList">
+      <div class="nav-element" (click)="navClickHandler(elem.text)">
+        <span>{{elem.text}}</span>
+      </div>
+    </ng-container>
+  </div>
+  <div id="right-nav-panel">
+        <mat-icon aria-hidden="false"
+                  aria-label="Example home icon"
+                  [matBadge]="counter$ | async"
+                  matBadgeColor="warn"
+                  id="nav-icon">notifications</mat-icon>
+  </div>
+</nav>

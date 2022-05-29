@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './component/header/header.component';
+import { NavbarComponent } from './component/header/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    NavbarComponent
   ],
   imports: [
     CommonModule,
@@ -15,7 +15,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatBadgeModule
   ],
   exports: [
-    HeaderComponent
+    NavbarComponent,
   ]
 })
 export class CustomModule { }
