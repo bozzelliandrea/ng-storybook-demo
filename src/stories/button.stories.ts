@@ -1,7 +1,5 @@
-// also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import {Meta, Story} from '@storybook/angular/types-6-0';
-import {NavbarComponent} from "../app/custom/component/header/navbar.component";
-import {moduleMetadata} from "@storybook/angular";
+import {componentWrapperDecorator, moduleMetadata, storiesOf} from "@storybook/angular";
 import {MatButton, MatButtonModule} from '@angular/material/button';
 
 
@@ -12,6 +10,7 @@ export default {
     moduleMetadata({
       imports: [MatButtonModule],
     }),
+    componentWrapperDecorator(story => `<div style="margin: 3em">${story}</div>`),
   ],
   parameters: {
     layout: 'fullscreen',
@@ -38,3 +37,4 @@ export const Disabled: Story = (args) => ({
   props: args,
   template: `<button mat-raised-button disabled>Disabled</button>`,
 });
+

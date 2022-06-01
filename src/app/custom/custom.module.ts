@@ -31,6 +31,7 @@ import {MatChipsModule} from '@angular/material/chips';
   exports: [
     NavbarComponent,
     DashboardComponent,
+    TaskComponent
   ]
 })
 export class CustomModule {
