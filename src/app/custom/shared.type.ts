@@ -30,3 +30,4 @@ export type InternalEvent = {
   info?: string;
   _internal: string
 }
+export type Status = "TODO" | "PROGRESS" | "END";

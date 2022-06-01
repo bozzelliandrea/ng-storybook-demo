@@ -812,7 +812,7 @@
         },
         {
             "name": "TaskComponent",
-            "id": "component-TaskComponent-db970bf2b855b78899c6689908af46ea0a545858a98287b9d933c61a134d9a7367e18f561e37aa5b821d198b1fe2c287f8406912f73072dd139bd92125dc14e2",
+            "id": "component-TaskComponent-ed94eab8a06da5a53fe501b5c5d8c422051ef720621b90ff0390f85bf09c3b96ff7e7a21ffb83a3d87dd4020d86870ce49b7285257f7fcc75174dc0344007ad0",
             "file": "src/app/custom/component/task/task.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -833,7 +833,65 @@
                     "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 71,
+                    "jsdoctags": [
+                        {
+                            "pos": 1944,
+                            "end": 2134,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 1945,
+                                "end": 1949,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "code"
+                            },
+                            "comment": "<p>\nhint:\nCreate a new badge with {@link BadgeElement.of} method, only text param is required,\nthe of method creates one default instance.\n</p>"
+                        },
+                        {
+                            "pos": 2134,
+                            "end": 2297,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 2135,
+                                "end": 2142,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "example"
+                            },
+                            "comment": "<p>BadgeElement.of(&quot;Bugs&quot;, &quot;bug_report&quot;, &quot;warn&quot;);\nBadgeElement.of(&quot;Component&quot; , &quot;css&quot;, &quot;primary&quot;);\nBadgeElement.of(&quot;Release&quot;);</p>\n"
+                        },
+                        {
+                            "pos": 2297,
+                            "end": 2422,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 2298,
+                                "end": 2305,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "example"
+                            },
+                            "comment": "<p>[\n  {\n    &quot;text&quot;: &quot;Bugs&quot;,\n    &quot;icon&quot;: &quot;bug_report&quot;,\n    &quot;color&quot;: &quot;warn&quot;\n  }\n]</p>\n"
+                        }
+                    ],
+                    "rawdescription": "\n\nList of badge used for tag the task.\nEach badge is an implementation of {@link BadgeElement} class.\n\nParam is nullable\n\n\n<p>\nhint:\nCreate a new badge with {@link BadgeElement#of} method, only text param is required,\nthe of method creates one default instance.\n</p>\n\n```html\nBadgeElement.of(\"Bugs\", \"bug_report\", \"warn\");\nBadgeElement.of(\"Component\" , \"css\", \"primary\");\nBadgeElement.of(\"Release\");\n```\n\n```html\n[\n  {\n    \"text\": \"Bugs\",\n    \"icon\": \"bug_report\",\n    \"color\": \"warn\"\n  }\n]\n```",
+                    "description": "<p>List of badge used for tag the task.\nEach badge is an implementation of {@link BadgeElement} class.</p>\n<p>Param is nullable</p>\n<p>\nhint:\nCreate a new badge with {@link BadgeElement#of} method, only text param is required,\nthe of method creates one default instance.\n</p>\n\n<div><pre class=\"line-numbers\"><code class=\"language-html\">BadgeElement.of(&quot;Bugs&quot;, &quot;bug_report&quot;, &quot;warn&quot;);\nBadgeElement.of(&quot;Component&quot; , &quot;css&quot;, &quot;primary&quot;);\nBadgeElement.of(&quot;Release&quot;);</code></pre></div><div><pre class=\"line-numbers\"><code class=\"language-html\">[\n  {\n    &quot;text&quot;: &quot;Bugs&quot;,\n    &quot;icon&quot;: &quot;bug_report&quot;,\n    &quot;color&quot;: &quot;warn&quot;\n  }\n]</code></pre></div>",
+                    "line": 109,
                     "type": "BadgeElement[]",
                     "decorators": []
                 },
@@ -841,7 +899,9 @@
                     "name": "description",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 70,
+                    "rawdescription": "\n\nA description for the task, the content explain the scope of the task or what the user need to know before start.\nParam is nullable\n",
+                    "description": "<p>A description for the task, the content explain the scope of the task or what the user need to know before start.\nParam is nullable</p>\n",
+                    "line": 78,
                     "type": "string | undefined",
                     "decorators": []
                 },
@@ -849,7 +909,9 @@
                     "name": "task",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 69,
+                    "rawdescription": "\n\nThe title of the created task.\n",
+                    "description": "<p>The title of the created task.</p>\n",
+                    "line": 72,
                     "type": "string",
                     "decorators": []
                 }
@@ -864,7 +926,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, Input} from '@angular/core';\nimport {BadgeElement} from \"../../shared.type\";\n\n@Component({\n  selector: 'app-task',\n  template: `\n    <div class=\"task-container\">\n      <h3>{{task}}</h3>\n      <p>{{description}}</p>\n      <mat-chip-list class=\"badge-container\" *ngIf=\"badgeList.length > 0\">\n        <mat-chip *ngFor=\"let badge of badgeList\"\n                  [color]=\"badge.color\" [selected]=\"badge.color != undefined\">\n          <mat-chip-avatar>\n            <mat-icon>{{badge.icon}}</mat-icon>\n          </mat-chip-avatar>\n          {{badge.text}}\n        </mat-chip>\n      </mat-chip-list>\n    </div>\n  `,\n  styles: [`\n    .task-container {\n      //width: 500px;\n      width: fit-content;\n      max-width: 350px;\n      block-size: fit-content;\n      display: block;\n      overflow: hidden;\n      background: #afaeae;\n      border: black 1px solid;\n      border-radius: 5px;\n      margin: 10px;\n\n      & h3 {\n        background: black;\n        color: white;\n        padding-top: 10px;\n        text-align: center;\n        font-family: monospace;\n        font-size: 13px;\n      }\n\n      & p {\n        color: black;\n        margin: 0;\n        font-size: 13px;\n        padding: 10px;\n      }\n\n      .badge-container {\n\n        display: flex;\n        flex-direction: row;\n        justify-content: space-between;\n        padding: 10px;\n\n        & mat-chip {\n          width: fit-content;\n          block-size: fit-content;\n        }\n      }\n\n\n    }\n  `]\n})\nexport class TaskComponent {\n\n  @Input() public task!: string;\n  @Input() public description?: string | undefined;\n  @Input() public badgeList: BadgeElement[] = [];\n}\n\n",
+            "sourceCode": "import {Component, Input} from '@angular/core';\nimport {BadgeElement} from \"../../shared.type\";\n\n@Component({\n  selector: 'app-task',\n  template: `\n    <div class=\"task-container\">\n      <h3>{{task}}</h3>\n      <p>{{description}}</p>\n      <mat-chip-list class=\"badge-container\" *ngIf=\"badgeList.length > 0\">\n        <mat-chip *ngFor=\"let badge of badgeList\"\n                  [color]=\"badge.color\" [selected]=\"badge.color != undefined\">\n          <mat-chip-avatar>\n            <mat-icon>{{badge.icon}}</mat-icon>\n          </mat-chip-avatar>\n          {{badge.text}}\n        </mat-chip>\n      </mat-chip-list>\n    </div>\n  `,\n  styles: [`\n    .task-container {\n      //width: 500px;\n      width: fit-content;\n      max-width: 350px;\n      block-size: fit-content;\n      display: block;\n      overflow: hidden;\n      background: #afaeae;\n      border: black 1px solid;\n      border-radius: 5px;\n      margin: 10px;\n\n      & h3 {\n        background: black;\n        color: white;\n        padding-top: 10px;\n        text-align: center;\n        font-family: monospace;\n        font-size: 13px;\n      }\n\n      & p {\n        color: black;\n        margin: 0;\n        font-size: 13px;\n        padding: 10px;\n      }\n\n      .badge-container {\n\n        display: flex;\n        flex-direction: row;\n        justify-content: space-between;\n        padding: 10px;\n\n        & mat-chip {\n          width: fit-content;\n          block-size: fit-content;\n        }\n      }\n\n\n    }\n  `]\n})\nexport class TaskComponent {\n\n  /**\n   * The title of the created task.\n   */\n  @Input() public task!: string;\n\n  /**\n   * A description for the task, the content explain the scope of the task or what the user need to know before start.\n   * Param is nullable\n   */\n  @Input() public description?: string | undefined;\n\n  /**\n   * List of badge used for tag the task.\n   * Each badge is an implementation of {@link BadgeElement} class.\n   *\n   * Param is nullable\n   *\n   * @code\n   *\n   * <p>\n   * hint:\n   * Create a new badge with {@link BadgeElement#of} method, only text param is required,\n   * the of method creates one default instance.\n   * </p>\n   *\n   * @example\n   * BadgeElement.of(\"Bugs\", \"bug_report\", \"warn\");\n   * BadgeElement.of(\"Component\" , \"css\", \"primary\");\n   * BadgeElement.of(\"Release\");\n   *\n   *\n   * @example\n   * [\n   *   {\n   *     \"text\": \"Bugs\",\n   *     \"icon\": \"bug_report\",\n   *     \"color\": \"warn\"\n   *   }\n   * ]\n   */\n  @Input() public badgeList: BadgeElement[] = [];\n}\n\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n    .task-container {\n      //width: 500px;\n      width: fit-content;\n      max-width: 350px;\n      block-size: fit-content;\n      display: block;\n      overflow: hidden;\n      background: #afaeae;\n      border: black 1px solid;\n      border-radius: 5px;\n      margin: 10px;\n\n      & h3 {\n        background: black;\n        color: white;\n        padding-top: 10px;\n        text-align: center;\n        font-family: monospace;\n        font-size: 13px;\n      }\n\n      & p {\n        color: black;\n        margin: 0;\n        font-size: 13px;\n        padding: 10px;\n      }\n\n      .badge-container {\n\n        display: flex;\n        flex-direction: row;\n        justify-content: space-between;\n        padding: 10px;\n\n        & mat-chip {\n          width: fit-content;\n          block-size: fit-content;\n        }\n      }\n\n\n    }\n  \n"
@@ -1382,7 +1444,7 @@
         ]
     },
     "coverage": {
-        "count": 0,
+        "count": 3,
         "status": "low",
         "files": [
             {
@@ -1427,9 +1489,9 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "TaskComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/4",
-                "status": "low"
+                "coveragePercent": 75,
+                "coverageCount": "3/4",
+                "status": "good"
             },
             {
                 "filePath": "src/app/custom/shared.type.ts",

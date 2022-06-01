@@ -1,4 +1,4 @@
-import {moduleMetadata} from "@storybook/angular";
+import {componentWrapperDecorator, moduleMetadata} from "@storybook/angular";
 import {Meta, Story} from "@storybook/angular/types-6-0";
 import {CustomModule} from "../app/custom/custom.module";
 import {TaskComponent} from "../app/custom/component/task/task.component";
@@ -11,6 +11,7 @@ export default {
     moduleMetadata({
       imports: [CustomModule],
     }),
+    componentWrapperDecorator(story => `<div style="margin: 3em">${story}</div>`),
   ],
   parameters: {
     layout: 'fullscreen',
