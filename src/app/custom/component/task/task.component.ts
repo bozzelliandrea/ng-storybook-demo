@@ -4,7 +4,7 @@ import {BadgeElement, Status} from "../../shared.type";
 @Component({
   selector: 'app-task',
   template: `
-    <div class="task-container">
+    <div id="taskContainerId" class="task-container">
       <span>
         {{task}}
         <mat-chip *ngIf="status"
@@ -30,14 +30,29 @@ import {BadgeElement, Status} from "../../shared.type";
     </div>
   `,
   styles: [`
+
+    :host {
+      --primary: black;
+      --secondary: #afaeae;
+      --font-primary: white;
+      --font-secondary: black;
+    }
+
+    .dark {
+      --primary: #afaeae;
+      --secondary: black;
+      --font-primary: black;
+      --font-secondary: white;
+    }
+
     .task-container {
       width: fit-content;
       max-width: 350px;
       block-size: fit-content;
       display: block;
       overflow: hidden;
-      background: #afaeae;
-      border: black 1px solid;
+      background: var(--secondary);
+      border: var(--primary) 1px solid;
       border-radius: 5px;
       margin: 10px;
 
@@ -47,15 +62,15 @@ import {BadgeElement, Status} from "../../shared.type";
         align-items: center;
         padding: 6px;
 
-        background: black;
-        color: white;
+        background: var(--primary);
+        color: var(--font-primary);
         text-align: center;
         font-family: monospace;
         font-size: 13px;
       }
 
       & p {
-        color: black;
+        color: var(--font-secondary);
         margin: 0;
         font-size: 13px;
         padding: 10px;
@@ -120,6 +135,52 @@ export class TaskComponent {
    */
   @Input() public badgeList: BadgeElement[] = [];
 
-  @Input() public status?: Status
+  /**
+   * Task status.
+   *
+   * @see {@link Status}
+   */
+  @Input() public status?: Status = 'TODO';
+
+  /**
+   * Toggle dark mode for the component.
+   * @default false.
+   *
+   * <p>
+   * if true: dark mode is On
+   * <br>
+   * if false: dark mode is Off
+   * </p>
+   * @type boolean
+   * @param value
+   */
+  @Input() set darkMode(value: boolean) {
+    this._dark = value;
+    this._toggleDark();
+  }
+
+  get darkMode(): boolean {
+    return this._dark;
+  }
+
+  /**
+   * @ignore
+   * @private
+   */
+  private _dark: boolean = false;
+
+  /**
+   * @ignore
+   * @private
+   */
+  private _toggleDark(): void {
+    const element = document.getElementById("taskContainerId");
+    if (element == null)
+      return;
+    else if (this._dark)
+      element.classList.add("dark");
+    else
+      element.classList.remove("dark");
+  }
 }
 

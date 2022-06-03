@@ -76,12 +76,12 @@
     "classes": [
         {
             "name": "BadgeElement",
-            "id": "class-BadgeElement-5516eb700c3ed8019870963c280cd6bb84c7876746a3e3ef410649b8d76de9e9bf249c3c615919efbbd86b60d6f753b6615a74d909826c41018ec0aa5fdd173c",
+            "id": "class-BadgeElement-ccbc4e5eea54f6ec5b33c82b666e725280f7f94a5b7c04c44bc4d13045cac7b263fa39a28572361a390e4d5f19de7819cb14d5951fdc5fddf87fcf10ef234647",
             "file": "src/app/custom/shared.type.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "class",
-            "sourceCode": "import {ThemePalette} from \"@angular/material/core/common-behaviors/color\";\n\nexport class Element {\n  text!: string;\n\n  constructor(text: string) {\n    this.text = text;\n  }\n}\n\nexport class BadgeElement extends Element {\n  icon: string;\n  color: ThemePalette;\n\n  private constructor(text: string, icon: string, color: ThemePalette) {\n    super(text);\n    this.icon = icon;\n    this.color = color;\n  }\n\n  static of(text: string, icon?: string, color?: ThemePalette): BadgeElement {\n    return new BadgeElement(text, icon ?? \"bolt\", color ?? undefined)\n  }\n}\n\nexport type BadgeValue = number | string;\nexport type InternalEvent = {\n  parent: any;\n  source: string;\n  info?: string;\n  _internal: string\n}\n",
+            "sourceCode": "import {ThemePalette} from \"@angular/material/core/common-behaviors/color\";\n\nexport class Element {\n  text!: string;\n\n  constructor(text: string) {\n    this.text = text;\n  }\n}\n\nexport class BadgeElement extends Element {\n  icon: string;\n  color: ThemePalette;\n\n  private constructor(text: string, icon: string, color: ThemePalette) {\n    super(text);\n    this.icon = icon;\n    this.color = color;\n  }\n\n  static of(text: string, icon?: string, color?: ThemePalette): BadgeElement {\n    return new BadgeElement(text, icon ?? \"bolt\", color ?? undefined)\n  }\n}\n\nexport type BadgeValue = number | string;\nexport type InternalEvent = {\n  parent: any;\n  source: string;\n  info?: string;\n  _internal: string\n}\nexport type Status = \"TODO\" | \"PROGRESS\" | \"END\";\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -249,12 +249,12 @@
         },
         {
             "name": "Element",
-            "id": "class-Element-5516eb700c3ed8019870963c280cd6bb84c7876746a3e3ef410649b8d76de9e9bf249c3c615919efbbd86b60d6f753b6615a74d909826c41018ec0aa5fdd173c",
+            "id": "class-Element-ccbc4e5eea54f6ec5b33c82b666e725280f7f94a5b7c04c44bc4d13045cac7b263fa39a28572361a390e4d5f19de7819cb14d5951fdc5fddf87fcf10ef234647",
             "file": "src/app/custom/shared.type.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "class",
-            "sourceCode": "import {ThemePalette} from \"@angular/material/core/common-behaviors/color\";\n\nexport class Element {\n  text!: string;\n\n  constructor(text: string) {\n    this.text = text;\n  }\n}\n\nexport class BadgeElement extends Element {\n  icon: string;\n  color: ThemePalette;\n\n  private constructor(text: string, icon: string, color: ThemePalette) {\n    super(text);\n    this.icon = icon;\n    this.color = color;\n  }\n\n  static of(text: string, icon?: string, color?: ThemePalette): BadgeElement {\n    return new BadgeElement(text, icon ?? \"bolt\", color ?? undefined)\n  }\n}\n\nexport type BadgeValue = number | string;\nexport type InternalEvent = {\n  parent: any;\n  source: string;\n  info?: string;\n  _internal: string\n}\n",
+            "sourceCode": "import {ThemePalette} from \"@angular/material/core/common-behaviors/color\";\n\nexport class Element {\n  text!: string;\n\n  constructor(text: string) {\n    this.text = text;\n  }\n}\n\nexport class BadgeElement extends Element {\n  icon: string;\n  color: ThemePalette;\n\n  private constructor(text: string, icon: string, color: ThemePalette) {\n    super(text);\n    this.icon = icon;\n    this.color = color;\n  }\n\n  static of(text: string, icon?: string, color?: ThemePalette): BadgeElement {\n    return new BadgeElement(text, icon ?? \"bolt\", color ?? undefined)\n  }\n}\n\nexport type BadgeValue = number | string;\nexport type InternalEvent = {\n  parent: any;\n  source: string;\n  info?: string;\n  _internal: string\n}\nexport type Status = \"TODO\" | \"PROGRESS\" | \"END\";\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -640,7 +640,7 @@
                 "args": [],
                 "line": 33
             },
-            "templateData": "<div id=\"container\">\n  <ngx-charts-bar-vertical\n    [view]=\"view\"\n    [scheme]=\"colorScheme\"\n    [results]=\"single\"\n    [gradient]=\"gradient\"\n    [xAxis]=\"showXAxis\"\n    [yAxis]=\"showYAxis\"\n    [legend]=\"showLegend\"\n    [showXAxisLabel]=\"showXAxisLabel\"\n    [showYAxisLabel]=\"showYAxisLabel\"\n    [xAxisLabel]=\"xAxisLabel\"\n    [yAxisLabel]=\"yAxisLabel\"\n    (select)=\"onSelect($event)\">\n  </ngx-charts-bar-vertical>\n  <ngx-charts-advanced-pie-chart\n    [view]=\"view\"\n    [scheme]=\"colorScheme\"\n    [results]=\"single\"\n    [gradient]=\"gradient\"\n    (select)=\"onSelect($event)\"\n    (activate)=\"onActivate($event)\"\n    (deactivate)=\"onDeactivate($event)\"\n  >\n  </ngx-charts-advanced-pie-chart>\n</div>\n<app-task [task]=\"'TestTask'\"\n          [description]=\"'This is my new Task'\"\n          [badgeList]=\"badgeList\">\n</app-task>\n"
+            "templateData": "<div id=\"container\">\n  <ngx-charts-bar-vertical\n    [view]=\"view\"\n    [scheme]=\"colorScheme\"\n    [results]=\"single\"\n    [gradient]=\"gradient\"\n    [xAxis]=\"showXAxis\"\n    [yAxis]=\"showYAxis\"\n    [legend]=\"showLegend\"\n    [showXAxisLabel]=\"showXAxisLabel\"\n    [showYAxisLabel]=\"showYAxisLabel\"\n    [xAxisLabel]=\"xAxisLabel\"\n    [yAxisLabel]=\"yAxisLabel\"\n    (select)=\"onSelect($event)\">\n  </ngx-charts-bar-vertical>\n  <ngx-charts-advanced-pie-chart\n    [view]=\"view\"\n    [scheme]=\"colorScheme\"\n    [results]=\"single\"\n    [gradient]=\"gradient\"\n    (select)=\"onSelect($event)\"\n    (activate)=\"onActivate($event)\"\n    (deactivate)=\"onDeactivate($event)\"\n  >\n  </ngx-charts-advanced-pie-chart>\n</div>\n<app-task [task]=\"'TestTask'\"\n          [description]=\"'This is my new Task'\"\n          [status]=\"'PROGRESS'\"\n          [badgeList]=\"badgeList\">\n</app-task>\n"
         },
         {
             "name": "NavbarComponent",
@@ -812,7 +812,7 @@
         },
         {
             "name": "TaskComponent",
-            "id": "component-TaskComponent-ed94eab8a06da5a53fe501b5c5d8c422051ef720621b90ff0390f85bf09c3b96ff7e7a21ffb83a3d87dd4020d86870ce49b7285257f7fcc75174dc0344007ad0",
+            "id": "component-TaskComponent-6eb1c4c77098bf37b5fcd14347610fabed8f589225f521d761011a21f25d9abd47ca87d2581fa3c033b108130d53aab03b9b5b85ad82cd100ea8068c2c15841f",
             "file": "src/app/custom/component/task/task.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -822,9 +822,9 @@
             "selector": "app-task",
             "styleUrls": [],
             "styles": [
-                "\n    .task-container {\n      //width: 500px;\n      width: fit-content;\n      max-width: 350px;\n      block-size: fit-content;\n      display: block;\n      overflow: hidden;\n      background: #afaeae;\n      border: black 1px solid;\n      border-radius: 5px;\n      margin: 10px;\n\n      & h3 {\n        background: black;\n        color: white;\n        padding-top: 10px;\n        text-align: center;\n        font-family: monospace;\n        font-size: 13px;\n      }\n\n      & p {\n        color: black;\n        margin: 0;\n        font-size: 13px;\n        padding: 10px;\n      }\n\n      .badge-container {\n\n        display: flex;\n        flex-direction: row;\n        justify-content: space-between;\n        padding: 10px;\n\n        & mat-chip {\n          width: fit-content;\n          block-size: fit-content;\n        }\n      }\n\n\n    }\n  "
+                "\n\n    :host {\n      --primary: black;\n      --secondary: #afaeae;\n      --font-primary: white;\n      --font-secondary: black;\n    }\n\n    .dark {\n      --primary: #afaeae;\n      --secondary: black;\n      --font-primary: black;\n      --font-secondary: white;\n    }\n\n    .task-container {\n      width: fit-content;\n      max-width: 350px;\n      block-size: fit-content;\n      display: block;\n      overflow: hidden;\n      background: var(--secondary);\n      border: var(--primary) 1px solid;\n      border-radius: 5px;\n      margin: 10px;\n\n      & span {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        padding: 6px;\n\n        background: var(--primary);\n        color: var(--font-primary);\n        text-align: center;\n        font-family: monospace;\n        font-size: 13px;\n      }\n\n      & p {\n        color: var(--font-secondary);\n        margin: 0;\n        font-size: 13px;\n        padding: 10px;\n      }\n\n      .badge-container {\n\n        display: flex;\n        flex-direction: row;\n        justify-content: space-between;\n        padding: 10px;\n\n        & mat-chip {\n          width: fit-content;\n          block-size: fit-content;\n        }\n      }\n    }\n  "
             ],
-            "template": "<div class=\"task-container\">\n  <h3>{{task}}</h3>\n  <p>{{description}}</p>\n  <mat-chip-list class=\"badge-container\" *ngIf=\"badgeList.length > 0\">\n    <mat-chip *ngFor=\"let badge of badgeList\"\n              [color]=\"badge.color\" [selected]=\"badge.color != undefined\">\n      <mat-chip-avatar>\n        <mat-icon>{{badge.icon}}</mat-icon>\n      </mat-chip-avatar>\n      {{badge.text}}\n    </mat-chip>\n  </mat-chip-list>\n</div>\n",
+            "template": "<div id=\"taskContainerId\" class=\"task-container\">\n  <span>\n    {{task}}\n    <mat-chip *ngIf=\"status\"\n              [selected]=\"status === 'PROGRESS' || status === 'END'\"\n              [color]=\"status === 'PROGRESS'\n                        ? 'primary'\n                        : status === 'END'\n                            ? 'accent'\n                            : null\">\n      {{status}}\n    </mat-chip>\n  </span>\n  <p>{{description}}</p>\n  <mat-chip-list class=\"badge-container\" *ngIf=\"badgeList.length > 0\">\n    <mat-chip *ngFor=\"let badge of badgeList\"\n              [color]=\"badge.color\" [selected]=\"badge.color != undefined\">\n      <mat-chip-avatar>\n        <mat-icon>{{badge.icon}}</mat-icon>\n      </mat-chip-avatar>\n      {{badge.text}}\n    </mat-chip>\n  </mat-chip-list>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -835,15 +835,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 1944,
-                            "end": 2134,
+                            "pos": 2746,
+                            "end": 2936,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 1945,
-                                "end": 1949,
+                                "pos": 2747,
+                                "end": 2751,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -853,15 +853,15 @@
                             "comment": "<p>\nhint:\nCreate a new badge with {@link BadgeElement.of} method, only text param is required,\nthe of method creates one default instance.\n</p>"
                         },
                         {
-                            "pos": 2134,
-                            "end": 2297,
+                            "pos": 2936,
+                            "end": 3099,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 2135,
-                                "end": 2142,
+                                "pos": 2937,
+                                "end": 2944,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -871,15 +871,15 @@
                             "comment": "<p>BadgeElement.of(&quot;Bugs&quot;, &quot;bug_report&quot;, &quot;warn&quot;);\nBadgeElement.of(&quot;Component&quot; , &quot;css&quot;, &quot;primary&quot;);\nBadgeElement.of(&quot;Release&quot;);</p>\n"
                         },
                         {
-                            "pos": 2297,
-                            "end": 2422,
+                            "pos": 3099,
+                            "end": 3224,
                             "flags": 4227072,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 2298,
-                                "end": 2305,
+                                "pos": 3100,
+                                "end": 3107,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -891,8 +891,103 @@
                     ],
                     "rawdescription": "\n\nList of badge used for tag the task.\nEach badge is an implementation of {@link BadgeElement} class.\n\nParam is nullable\n\n\n<p>\nhint:\nCreate a new badge with {@link BadgeElement#of} method, only text param is required,\nthe of method creates one default instance.\n</p>\n\n```html\nBadgeElement.of(\"Bugs\", \"bug_report\", \"warn\");\nBadgeElement.of(\"Component\" , \"css\", \"primary\");\nBadgeElement.of(\"Release\");\n```\n\n```html\n[\n  {\n    \"text\": \"Bugs\",\n    \"icon\": \"bug_report\",\n    \"color\": \"warn\"\n  }\n]\n```",
                     "description": "<p>List of badge used for tag the task.\nEach badge is an implementation of {@link BadgeElement} class.</p>\n<p>Param is nullable</p>\n<p>\nhint:\nCreate a new badge with {@link BadgeElement#of} method, only text param is required,\nthe of method creates one default instance.\n</p>\n\n<div><pre class=\"line-numbers\"><code class=\"language-html\">BadgeElement.of(&quot;Bugs&quot;, &quot;bug_report&quot;, &quot;warn&quot;);\nBadgeElement.of(&quot;Component&quot; , &quot;css&quot;, &quot;primary&quot;);\nBadgeElement.of(&quot;Release&quot;);</code></pre></div><div><pre class=\"line-numbers\"><code class=\"language-html\">[\n  {\n    &quot;text&quot;: &quot;Bugs&quot;,\n    &quot;icon&quot;: &quot;bug_report&quot;,\n    &quot;color&quot;: &quot;warn&quot;\n  }\n]</code></pre></div>",
-                    "line": 109,
+                    "line": 136,
                     "type": "BadgeElement[]",
+                    "decorators": []
+                },
+                {
+                    "name": "darkMode",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 3435,
+                            "end": 3552,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 3436,
+                                "end": 3443,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 88,
+                                "escapedText": "default"
+                            },
+                            "comment": "<p>false.</p>\n<p>\nif true: dark mode is On\n<br>\nif false: dark mode is Off\n</p>"
+                        },
+                        {
+                            "pos": 3552,
+                            "end": 3571,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 341,
+                            "tagName": {
+                                "pos": 3553,
+                                "end": 3557,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 151,
+                                "escapedText": "type"
+                            },
+                            "comment": "",
+                            "typeExpression": {
+                                "pos": 3558,
+                                "end": 3565,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 307,
+                                "type": {
+                                    "pos": 3558,
+                                    "end": 3565,
+                                    "flags": 4194304,
+                                    "modifierFlagsCache": 0,
+                                    "transformFlags": 1,
+                                    "kind": 133
+                                }
+                            }
+                        },
+                        {
+                            "pos": 3571,
+                            "end": 3587,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 338,
+                            "tagName": {
+                                "pos": 3572,
+                                "end": 3577,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "param"
+                            },
+                            "comment": "",
+                            "name": {
+                                "pos": 3578,
+                                "end": 3583,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "value"
+                            },
+                            "isNameFirst": true,
+                            "isBracketed": false
+                        }
+                    ],
+                    "rawdescription": "\n\nToggle dark mode for the component.\n\n<p>\nif true: dark mode is On\n<br>\nif false: dark mode is Off\n</p>\n",
+                    "description": "<p>Toggle dark mode for the component.</p>\n<p>\nif true: dark mode is On\n<br>\nif false: dark mode is Off\n</p>\n",
+                    "line": 157,
+                    "type": "boolean",
                     "decorators": []
                 },
                 {
@@ -901,8 +996,39 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nA description for the task, the content explain the scope of the task or what the user need to know before start.\nParam is nullable\n",
                     "description": "<p>A description for the task, the content explain the scope of the task or what the user need to know before start.\nParam is nullable</p>\n",
-                    "line": 78,
+                    "line": 105,
                     "type": "string | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "status",
+                    "defaultValue": "'TODO'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 3312,
+                            "end": 3335,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 344,
+                            "tagName": {
+                                "pos": 3313,
+                                "end": 3316,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "see"
+                            },
+                            "comment": "<p>{@link Status}</p>\n"
+                        }
+                    ],
+                    "rawdescription": "\n\nTask status.\n\nSee {@link Status}\n",
+                    "description": "<p>Task status.</p>\n<p>See {@link Status}</p>\n",
+                    "line": 143,
+                    "type": "Status",
                     "decorators": []
                 },
                 {
@@ -911,7 +1037,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe title of the created task.\n",
                     "description": "<p>The title of the created task.</p>\n",
-                    "line": 72,
+                    "line": 99,
                     "type": "string",
                     "decorators": []
                 }
@@ -926,10 +1052,65 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, Input} from '@angular/core';\nimport {BadgeElement} from \"../../shared.type\";\n\n@Component({\n  selector: 'app-task',\n  template: `\n    <div class=\"task-container\">\n      <h3>{{task}}</h3>\n      <p>{{description}}</p>\n      <mat-chip-list class=\"badge-container\" *ngIf=\"badgeList.length > 0\">\n        <mat-chip *ngFor=\"let badge of badgeList\"\n                  [color]=\"badge.color\" [selected]=\"badge.color != undefined\">\n          <mat-chip-avatar>\n            <mat-icon>{{badge.icon}}</mat-icon>\n          </mat-chip-avatar>\n          {{badge.text}}\n        </mat-chip>\n      </mat-chip-list>\n    </div>\n  `,\n  styles: [`\n    .task-container {\n      //width: 500px;\n      width: fit-content;\n      max-width: 350px;\n      block-size: fit-content;\n      display: block;\n      overflow: hidden;\n      background: #afaeae;\n      border: black 1px solid;\n      border-radius: 5px;\n      margin: 10px;\n\n      & h3 {\n        background: black;\n        color: white;\n        padding-top: 10px;\n        text-align: center;\n        font-family: monospace;\n        font-size: 13px;\n      }\n\n      & p {\n        color: black;\n        margin: 0;\n        font-size: 13px;\n        padding: 10px;\n      }\n\n      .badge-container {\n\n        display: flex;\n        flex-direction: row;\n        justify-content: space-between;\n        padding: 10px;\n\n        & mat-chip {\n          width: fit-content;\n          block-size: fit-content;\n        }\n      }\n\n\n    }\n  `]\n})\nexport class TaskComponent {\n\n  /**\n   * The title of the created task.\n   */\n  @Input() public task!: string;\n\n  /**\n   * A description for the task, the content explain the scope of the task or what the user need to know before start.\n   * Param is nullable\n   */\n  @Input() public description?: string | undefined;\n\n  /**\n   * List of badge used for tag the task.\n   * Each badge is an implementation of {@link BadgeElement} class.\n   *\n   * Param is nullable\n   *\n   * @code\n   *\n   * <p>\n   * hint:\n   * Create a new badge with {@link BadgeElement#of} method, only text param is required,\n   * the of method creates one default instance.\n   * </p>\n   *\n   * @example\n   * BadgeElement.of(\"Bugs\", \"bug_report\", \"warn\");\n   * BadgeElement.of(\"Component\" , \"css\", \"primary\");\n   * BadgeElement.of(\"Release\");\n   *\n   *\n   * @example\n   * [\n   *   {\n   *     \"text\": \"Bugs\",\n   *     \"icon\": \"bug_report\",\n   *     \"color\": \"warn\"\n   *   }\n   * ]\n   */\n  @Input() public badgeList: BadgeElement[] = [];\n}\n\n",
+            "sourceCode": "import {Component, Input} from '@angular/core';\nimport {BadgeElement, Status} from \"../../shared.type\";\n\n@Component({\n  selector: 'app-task',\n  template: `\n    <div id=\"taskContainerId\" class=\"task-container\">\n      <span>\n        {{task}}\n        <mat-chip *ngIf=\"status\"\n                  [selected]=\"status === 'PROGRESS' || status === 'END'\"\n                  [color]=\"status === 'PROGRESS'\n                            ? 'primary'\n                            : status === 'END'\n                                ? 'accent'\n                                : null\">\n          {{status}}\n        </mat-chip>\n      </span>\n      <p>{{description}}</p>\n      <mat-chip-list class=\"badge-container\" *ngIf=\"badgeList.length > 0\">\n        <mat-chip *ngFor=\"let badge of badgeList\"\n                  [color]=\"badge.color\" [selected]=\"badge.color != undefined\">\n          <mat-chip-avatar>\n            <mat-icon>{{badge.icon}}</mat-icon>\n          </mat-chip-avatar>\n          {{badge.text}}\n        </mat-chip>\n      </mat-chip-list>\n    </div>\n  `,\n  styles: [`\n\n    :host {\n      --primary: black;\n      --secondary: #afaeae;\n      --font-primary: white;\n      --font-secondary: black;\n    }\n\n    .dark {\n      --primary: #afaeae;\n      --secondary: black;\n      --font-primary: black;\n      --font-secondary: white;\n    }\n\n    .task-container {\n      width: fit-content;\n      max-width: 350px;\n      block-size: fit-content;\n      display: block;\n      overflow: hidden;\n      background: var(--secondary);\n      border: var(--primary) 1px solid;\n      border-radius: 5px;\n      margin: 10px;\n\n      & span {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        padding: 6px;\n\n        background: var(--primary);\n        color: var(--font-primary);\n        text-align: center;\n        font-family: monospace;\n        font-size: 13px;\n      }\n\n      & p {\n        color: var(--font-secondary);\n        margin: 0;\n        font-size: 13px;\n        padding: 10px;\n      }\n\n      .badge-container {\n\n        display: flex;\n        flex-direction: row;\n        justify-content: space-between;\n        padding: 10px;\n\n        & mat-chip {\n          width: fit-content;\n          block-size: fit-content;\n        }\n      }\n    }\n  `]\n})\nexport class TaskComponent {\n\n  /**\n   * The title of the created task.\n   */\n  @Input() public task!: string;\n\n  /**\n   * A description for the task, the content explain the scope of the task or what the user need to know before start.\n   * Param is nullable\n   */\n  @Input() public description?: string | undefined;\n\n  /**\n   * List of badge used for tag the task.\n   * Each badge is an implementation of {@link BadgeElement} class.\n   *\n   * Param is nullable\n   *\n   * @code\n   *\n   * <p>\n   * hint:\n   * Create a new badge with {@link BadgeElement#of} method, only text param is required,\n   * the of method creates one default instance.\n   * </p>\n   *\n   * @example\n   * BadgeElement.of(\"Bugs\", \"bug_report\", \"warn\");\n   * BadgeElement.of(\"Component\" , \"css\", \"primary\");\n   * BadgeElement.of(\"Release\");\n   *\n   *\n   * @example\n   * [\n   *   {\n   *     \"text\": \"Bugs\",\n   *     \"icon\": \"bug_report\",\n   *     \"color\": \"warn\"\n   *   }\n   * ]\n   */\n  @Input() public badgeList: BadgeElement[] = [];\n\n  /**\n   * Task status.\n   *\n   * @see {@link Status}\n   */\n  @Input() public status?: Status = 'TODO';\n\n  /**\n   * Toggle dark mode for the component.\n   * @default false.\n   *\n   * <p>\n   * if true: dark mode is On\n   * <br>\n   * if false: dark mode is Off\n   * </p>\n   * @type boolean\n   * @param value\n   */\n  @Input() set darkMode(value: boolean) {\n    this._dark = value;\n    this._toggleDark();\n  }\n\n  get darkMode(): boolean {\n    return this._dark;\n  }\n\n  /**\n   * @ignore\n   * @private\n   */\n  private _dark: boolean = false;\n\n  /**\n   * @ignore\n   * @private\n   */\n  private _toggleDark(): void {\n    const element = document.getElementById(\"taskContainerId\");\n    if (element == null)\n      return;\n    else if (this._dark)\n      element.classList.add(\"dark\");\n    else\n      element.classList.remove(\"dark\");\n  }\n}\n\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n    .task-container {\n      //width: 500px;\n      width: fit-content;\n      max-width: 350px;\n      block-size: fit-content;\n      display: block;\n      overflow: hidden;\n      background: #afaeae;\n      border: black 1px solid;\n      border-radius: 5px;\n      margin: 10px;\n\n      & h3 {\n        background: black;\n        color: white;\n        padding-top: 10px;\n        text-align: center;\n        font-family: monospace;\n        font-size: 13px;\n      }\n\n      & p {\n        color: black;\n        margin: 0;\n        font-size: 13px;\n        padding: 10px;\n      }\n\n      .badge-container {\n\n        display: flex;\n        flex-direction: row;\n        justify-content: space-between;\n        padding: 10px;\n\n        & mat-chip {\n          width: fit-content;\n          block-size: fit-content;\n        }\n      }\n\n\n    }\n  \n"
+            "stylesData": "\n\n    :host {\n      --primary: black;\n      --secondary: #afaeae;\n      --font-primary: white;\n      --font-secondary: black;\n    }\n\n    .dark {\n      --primary: #afaeae;\n      --secondary: black;\n      --font-primary: black;\n      --font-secondary: white;\n    }\n\n    .task-container {\n      width: fit-content;\n      max-width: 350px;\n      block-size: fit-content;\n      display: block;\n      overflow: hidden;\n      background: var(--secondary);\n      border: var(--primary) 1px solid;\n      border-radius: 5px;\n      margin: 10px;\n\n      & span {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n        padding: 6px;\n\n        background: var(--primary);\n        color: var(--font-primary);\n        text-align: center;\n        font-family: monospace;\n        font-size: 13px;\n      }\n\n      & p {\n        color: var(--font-secondary);\n        margin: 0;\n        font-size: 13px;\n        padding: 10px;\n      }\n\n      .badge-container {\n\n        display: flex;\n        flex-direction: row;\n        justify-content: space-between;\n        padding: 10px;\n\n        & mat-chip {\n          width: fit-content;\n          block-size: fit-content;\n        }\n      }\n    }\n  \n",
+            "accessors": {
+                "darkMode": {
+                    "name": "darkMode",
+                    "setSignature": {
+                        "name": "darkMode",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 157,
+                        "rawdescription": "\n\nToggle dark mode for the component.\n\n<p>\nif true: dark mode is On\n<br>\nif false: dark mode is Off\n</p>\n",
+                        "description": "<p>Toggle dark mode for the component.</p>\n<p>\nif true: dark mode is On\n<br>\nif false: dark mode is Off\n</p>\n",
+                        "jsdoctags": [
+                            {
+                                "name": {
+                                    "pos": 3578,
+                                    "end": 3583,
+                                    "flags": 4227072,
+                                    "modifierFlagsCache": 0,
+                                    "transformFlags": 0,
+                                    "kind": 79,
+                                    "escapedText": "value"
+                                },
+                                "type": "boolean",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "pos": 3572,
+                                    "end": 3577,
+                                    "flags": 4227072,
+                                    "modifierFlagsCache": 0,
+                                    "transformFlags": 0,
+                                    "kind": 79,
+                                    "escapedText": "param"
+                                },
+                                "comment": ""
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "darkMode",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 162
+                    }
+                }
+            }
         }
     ],
     "modules": [
@@ -1150,6 +1331,16 @@
                 "defaultValue": "{\n  production: false\n}"
             },
             {
+                "name": "Histogram",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/graph.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1192,6 +1383,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/graph.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "args => ({\n  props: {\n    ...args\n  },\n  argTypes: {\n    view: { control: 'object' },\n    xAxis: { control: 'boolean' },\n    yAxis: { control: 'boolean' },\n    gradient: { control: 'boolean' },\n    legend: { control: 'boolean' },\n    showXAxisLabel: { control: 'boolean' },\n    xAxisLabel: { control: 'text' },\n    showYAxisLabel: { control: 'boolean' },\n    yAxisLabel: { control: 'text' },\n    scheme: { control: 'object' }\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/navbar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1206,7 +1407,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "args => ({\n  props: {\n    ...args\n  },\n})"
+                "defaultValue": "args => ({\n  props: {\n    ...args\n  },\n  argTypes: {\n    status: {\n      options: ['TODO', 'PROGRESS', 'END'],\n      control: { type: 'radio' },\n    },\n    darkMode: {\n      control: 'boolean',\n    }\n  },\n})"
             },
             {
                 "name": "Warn",
@@ -1242,6 +1443,17 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 181
+            },
+            {
+                "name": "Status",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"TODO\" | \"PROGRESS\" | \"END\"",
+                "file": "src/app/custom/shared.type.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 186
             }
         ],
         "enumerations": [],
@@ -1338,7 +1550,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "args => ({\n  props: {\n    ...args\n  },\n})"
+                    "defaultValue": "args => ({\n  props: {\n    ...args\n  },\n  argTypes: {\n    status: {\n      options: ['TODO', 'PROGRESS', 'END'],\n      control: { type: 'radio' },\n    },\n    darkMode: {\n      control: 'boolean',\n    }\n  },\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -1363,6 +1575,28 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/stories/graph.stories.ts": [
+                {
+                    "name": "Histogram",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/graph.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/graph.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "args => ({\n  props: {\n    ...args\n  },\n  argTypes: {\n    view: { control: 'object' },\n    xAxis: { control: 'boolean' },\n    yAxis: { control: 'boolean' },\n    gradient: { control: 'boolean' },\n    legend: { control: 'boolean' },\n    showXAxisLabel: { control: 'boolean' },\n    xAxisLabel: { control: 'text' },\n    showYAxisLabel: { control: 'boolean' },\n    yAxisLabel: { control: 'text' },\n    scheme: { control: 'object' }\n  },\n})"
                 }
             ],
             "src/app/custom/component/dashboard/data.ts": [
@@ -1425,6 +1659,17 @@
                     "deprecationMessage": "",
                     "description": "",
                     "kind": 181
+                },
+                {
+                    "name": "Status",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"TODO\" | \"PROGRESS\" | \"END\"",
+                    "file": "src/app/custom/shared.type.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 186
                 }
             ]
         }
@@ -1489,9 +1734,9 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "TaskComponent",
-                "coveragePercent": 75,
-                "coverageCount": "3/4",
-                "status": "good"
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
             },
             {
                 "filePath": "src/app/custom/shared.type.ts",
@@ -1586,6 +1831,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Warn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/graph.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Histogram",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/graph.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

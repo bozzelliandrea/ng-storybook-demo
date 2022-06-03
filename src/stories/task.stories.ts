@@ -22,6 +22,15 @@ const Template: Story = args => ({
   props: {
     ...args
   },
+  argTypes: {
+    status: {
+      options: ['TODO', 'PROGRESS', 'END'],
+      control: { type: 'radio' },
+    },
+    darkMode: {
+      control: 'boolean',
+    }
+  },
 });
 
 export const Default = Template.bind({});
