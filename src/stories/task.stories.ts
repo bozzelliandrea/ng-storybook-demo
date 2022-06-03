@@ -11,7 +11,7 @@ export default {
     moduleMetadata({
       imports: [CustomModule],
     }),
-    componentWrapperDecorator(story => `<div style="margin: 3em">${story}</div>`),
+    componentWrapperDecorator(story => `<div style="margin: 4em">${story}</div>`),
   ],
   parameters: {
     layout: 'fullscreen',

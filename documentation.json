@@ -1397,7 +1397,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<NavbarComponent>",
-                "defaultValue": "(args: NavbarComponent) => ({\n  props: args,\n})"
+                "defaultValue": "(args: NavbarComponent) => ({\n  props: args\n})"
             },
             {
                 "name": "Template",
@@ -1630,7 +1630,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<NavbarComponent>",
-                    "defaultValue": "(args: NavbarComponent) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: NavbarComponent) => ({\n  props: args\n})"
                 }
             ]
         },
